@@ -4,9 +4,10 @@ from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')
-    regid = models.TextField()
+    naam = models.TextField(null=True)
+    regid = models.TextField(null = True)
     klas = models.CharField(max_length=5,null=True)
+    betaald = models.BooleanField(default=False)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
@@ -17,4 +18,4 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.regid
+        return self.regid 

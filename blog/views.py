@@ -42,3 +42,15 @@ def push(request):
     response = Push.Push('derp',posts)
         
     return render(request, 'blog/push.html', {'response': response})
+def xml(request):
+    posts = Post.objects.all()
+       
+    return render(request, 'blog/xml.html', {'posts': posts})
+def register(request,naam,klas,regid):
+    #if request.method == "POST":
+        # klas = request.POST.__getitem__('klas')
+        #regid = request.POST.__getitem__('regid')
+        #naam = request.POST.__getitem__('naam')
+    if naam != "" and klas != "" and regid != "":
+        Post.objects.create(naam = naam,klas = klas, regid = regid)
+    return render(request,"blog/empty.html")
