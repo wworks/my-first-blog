@@ -30,7 +30,7 @@ class Push(object):
         
         
         
-        gcm = GCM("AIzaSyAbEgL9oCCxYrwaFySj0E_4k4Luxduj18w")
+        gcm = GCM("xxx")
         for post in posts:
             datamsg = ""
             for row in rows:
