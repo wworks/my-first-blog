@@ -18,4 +18,4 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.naam + " " + self.klas
+        return self.naam + " " + self.klas + " betaald: " + str(self.betaald)
