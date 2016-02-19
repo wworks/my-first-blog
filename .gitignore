@@ -7,8 +7,6 @@
 *.userosscache
 *.sln.docstates
 
-*.*
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -17,6 +15,7 @@
 x64/
 x86/
 build/
+push.py
 bld/
 *.pyc
 myenv/
